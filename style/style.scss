@@ -1,0 +1,102 @@
+ @font-face {
+    font-family: 'Century Gothic';
+    src: local('Century Gothic'),
+    url('../fonts/ofont.ru_Century\ Gothic.ttf') format('truetype');
+    
+    /*src: local('Cleanvertising'),
+    url('../fonts/cleanvertising-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal; */
+}
+
+@font-face {
+    font-family: 'Cervo Thin';
+    src: local('Cervo Thin'),
+    url('../fonts/Cervo\ Thin.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Cervo Regular';
+    src: local('Cervo Regular'),
+    url('../fonts/Cervo\ Regular.otf') format('opentype');
+}
+
+@import "blocks/_variables";
+
+@import "blocks/header/_nameOfSite";
+@import "blocks/header/_mainNavigationMenu";
+
+@import "blocks/main/homePage/_first";
+@import "blocks/main/homePage/_projects";
+@import "blocks/main/homePage/_partners";
+
+@import "blocks/footer/_footer__links";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+body {
+    background: $colorBackgroundHeader;
+    //font-family: $main-font;
+    font-size: 14px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(auto, auto);
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 10px;
+}
+
+header {
+    grid-area: 1/1/2/13;
+    display: grid;
+    grid-template-rows: repeat(auto, auto);
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 10px;
+    height: 10vh;
+}
+
+main {
+    grid-column: 1/13;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-rows: repeat(auto, auto);
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 10px;
+}
+
+footer {
+    grid-column: 1/13;
+    display: grid;
+    grid-template-rows: repeat(auto, auto);
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 10px;
+    height: 30vh;
+    background: #53565a;
+
+    font-family: 'Cervo Thin';
+    color: $colorTextLight;
+    font-size: 1.3em;
+}
+
+footer p {
+    grid-column: 3/11;
+    margin: 20px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}

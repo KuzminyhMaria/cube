@@ -1,0 +1,18 @@
+.nameOfSite {
+    grid-area: 1/2/2/5;
+}
+
+.nameOfSite h1 {
+    font-family: 'Century Gothic';
+    font-size: 1.7em;
+    font-weight: 600;
+    color: $colorText;
+    float: left;
+    line-height: 1.6;
+    margin: 3vh 10px 3vh 0;
+}
+
+.nameOfSite img {
+    height: 2.5em;
+    margin: 3vh 0;
+}
