@@ -59,6 +59,7 @@ header {
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 10px;
     height: 10vh;
+    position: relative;
 }
 
 main {
@@ -87,6 +88,16 @@ footer {
 footer p {
     grid-column: 3/11;
     margin: 20px 0;
+}
+
+@media (max-width: 320px) {
+    footer {
+        height: auto;
+    }
+
+    .copyrightMark {
+        text-align: center;
+    }
 }
 
 a {

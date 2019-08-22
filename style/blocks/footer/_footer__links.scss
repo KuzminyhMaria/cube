@@ -12,10 +12,6 @@
     list-style: none; 
 }
 
-.footer__links li {
-
-}
-
 .footer__links li:not(:last-of-type) {
     margin-bottom: 8px;
 }
@@ -25,9 +21,6 @@
     color: $colorTextLight;
     font-size: 1em;
     display: block;
-    vertical-align: 10;
-    /* vertical-align: middle;
-    clear: both; */
 }
 
 .footer__links a:hover {
@@ -43,4 +36,15 @@
     
     margin: 0 0 0 8px;
     vertical-align: 9px;
+}
+
+@media (max-width: 320px) {
+    .footer__links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__links ul:not(:last-of-type) {
+        padding-bottom: 5vh;
+    }
 }

@@ -16,3 +16,9 @@
     height: 2.5em;
     margin: 3vh 0;
 }
+
+@media (max-width: 320px) {
+    .nameOfSite {
+       grid-area: 1/2/2/7; 
+    }
+}

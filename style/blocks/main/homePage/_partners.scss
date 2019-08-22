@@ -1,10 +1,9 @@
 .partners {
     grid-column: 1/13;
     display: grid;
-    grid-template-rows: 20vh auto;
+    grid-template-rows: 20vh 40vh 10vh;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 10px;
-    height: 70vh;
 }
 
 .partners h2 {
@@ -19,13 +18,15 @@
     grid-column: 3/11;
     display: flex;
     justify-content: space-around;
-    //align-items: center;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
 }
 
-.listOfPartners img  {
+.listOfPartners a {
     margin: 0 4vw 4vh 4vw;
+}
+
+.listOfPartners img {
     transition-duration: .3s;
 }
 
@@ -33,21 +34,57 @@
     transform: scale(1.3);
 }
 
-.listOfPartners__brusnika,
-.listOfPartners__UralMiningAndMetallurgicalCompany {
+.listOfPartners__brusnika img,
+.listOfPartners__UralMiningAndMetallurgicalCompany img {
     height: 10vh;
 }
 
-.listOfPartners__Astra {
+
+.listOfPartners__Astra img {
     height: 8vh;
+    margin-top: -25px;
 }
 
-.listOfPartners__LSR,
-.listOfPartners__SinaraDevelopment {
+.listOfPartners__LSR img,
+.listOfPartners__SinaraDevelopment img {
     height: 5vh;
 }
 
-.listOfPartners__ForumGroup,
-.listOfPartners__RussianCopperCompany {
+.listOfPartners__ForumGroup img,
+.listOfPartners__RussianCopperCompany img {
     height: 6vh;
+}
+
+@media (max-width: 320px) {
+    .partners {
+        grid-template-rows: 20vh 70vh 10vh;
+    }
+
+    .partners h2 {
+        margin: 0 auto;
+    }
+
+    .listOfPartners a:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .listOfPartners__brusnika img,
+    .listOfPartners__UralMiningAndMetallurgicalCompany img {
+        height: 8vh;
+    }
+
+    .listOfPartners__Astra img {
+        height: 6vh;
+        margin-top: 0;
+    }
+
+    .listOfPartners__LSR img,
+    .listOfPartners__SinaraDevelopment img {
+        height: 3vh;
+    }
+
+    .listOfPartners__ForumGroup img,
+    .listOfPartners__RussianCopperCompany img {
+        height: 4vh;
+    }
 }

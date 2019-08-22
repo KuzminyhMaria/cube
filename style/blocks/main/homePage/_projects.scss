@@ -2,10 +2,9 @@
     background: #f1f1f1;
     grid-column: 1/13;
     display: grid;
-    grid-template-rows: 20vh auto;
+    grid-template-rows: 20vh 80vh;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 10px;
-    height: 100vh;
 }
 
 .prodjects h2 {
@@ -44,4 +43,24 @@
     font-weight: 600;
     text-align: center;
     padding: 3vh 0;
+}
+
+@media (max-width: 320px) {
+    .prodjects {
+        grid-template-rows: 20vh auto;
+    }
+
+    .prodjects h2 {
+        margin: 0 auto;
+    }
+
+    .sampleProjects {
+        grid-template-rows: repeat(2, 70vh);
+        grid-template-columns: 1fr;
+        grid-row-gap: 50px;
+    }
+
+    .sampleProjects:last-child {
+        margin-bottom: 10vh;
+    }
 }

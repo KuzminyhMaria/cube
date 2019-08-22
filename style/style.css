@@ -40,11 +40,26 @@
   margin: 3vh 0;
 }
 
+@media (max-width: 320px) {
+  .nameOfSite {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 5;
+    grid-area: 1/2/2/7;
+  }
+}
+
 .mainNavigationMenu {
   -ms-grid-column: 9;
   -ms-grid-column-span: 3;
   grid-column: 9/12;
   width: 100%;
+  position: relative;
+}
+
+.logoOfMenu {
+  display: none;
 }
 
 .mainNavigationMenu ul {
@@ -91,23 +106,20 @@
           transform: scale(1.2);
 }
 
-/*@media (max-width: 1320px) {
-    .mainNavigationMenu__li {
-        font-size: 1em;
-    }
+@media (max-width: 320px) {
+  .mainNavigationMenu ul {
+    display: none;
+  }
+  .logoOfMenu {
+    display: block;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 3.5vh;
+    right: 0;
+  }
 }
 
-@media (max-width: 1310px) {
-    .mainNavigationMenu {
-        grid-area: 1/8/3/12;  
-    }
-}
-
-@media (max-width: 1060px) {
-    .mainNavigationMenu {
-        display: none;
-    }
-} */
 .first {
   -ms-grid-column: 1;
   -ms-grid-column-span: 12;
@@ -127,12 +139,11 @@
   grid-column: 1/13;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 20vh auto;
-      grid-template-rows: 20vh auto;
+  -ms-grid-rows: 20vh 80vh;
+      grid-template-rows: 20vh 80vh;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 10px;
-  height: 100vh;
 }
 
 .prodjects h2 {
@@ -184,18 +195,37 @@
   padding: 3vh 0;
 }
 
+@media (max-width: 320px) {
+  .prodjects {
+    -ms-grid-rows: 20vh auto;
+        grid-template-rows: 20vh auto;
+  }
+  .prodjects h2 {
+    margin: 0 auto;
+  }
+  .sampleProjects {
+    -ms-grid-rows: (70vh)[2];
+        grid-template-rows: repeat(2, 70vh);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-row-gap: 50px;
+  }
+  .sampleProjects:last-child {
+    margin-bottom: 10vh;
+  }
+}
+
 .partners {
   -ms-grid-column: 1;
   -ms-grid-column-span: 12;
   grid-column: 1/13;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 20vh auto;
-      grid-template-rows: 20vh auto;
+  -ms-grid-rows: 20vh 40vh 10vh;
+      grid-template-rows: 20vh 40vh 10vh;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 10px;
-  height: 70vh;
 }
 
 .partners h2 {
@@ -219,15 +249,18 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.listOfPartners img {
+.listOfPartners a {
   margin: 0 4vw 4vh 4vw;
+}
+
+.listOfPartners img {
   -webkit-transition-duration: .3s;
           transition-duration: .3s;
 }
@@ -237,23 +270,53 @@
           transform: scale(1.3);
 }
 
-.listOfPartners__brusnika,
-.listOfPartners__UralMiningAndMetallurgicalCompany {
+.listOfPartners__brusnika img,
+.listOfPartners__UralMiningAndMetallurgicalCompany img {
   height: 10vh;
 }
 
-.listOfPartners__Astra {
+.listOfPartners__Astra img {
   height: 8vh;
+  margin-top: -25px;
 }
 
-.listOfPartners__LSR,
-.listOfPartners__SinaraDevelopment {
+.listOfPartners__LSR img,
+.listOfPartners__SinaraDevelopment img {
   height: 5vh;
 }
 
-.listOfPartners__ForumGroup,
-.listOfPartners__RussianCopperCompany {
+.listOfPartners__ForumGroup img,
+.listOfPartners__RussianCopperCompany img {
   height: 6vh;
+}
+
+@media (max-width: 320px) {
+  .partners {
+    -ms-grid-rows: 20vh 70vh 10vh;
+        grid-template-rows: 20vh 70vh 10vh;
+  }
+  .partners h2 {
+    margin: 0 auto;
+  }
+  .listOfPartners a:last-of-type {
+    margin-bottom: 0;
+  }
+  .listOfPartners__brusnika img,
+  .listOfPartners__UralMiningAndMetallurgicalCompany img {
+    height: 8vh;
+  }
+  .listOfPartners__Astra img {
+    height: 6vh;
+    margin-top: 0;
+  }
+  .listOfPartners__LSR img,
+  .listOfPartners__SinaraDevelopment img {
+    height: 3vh;
+  }
+  .listOfPartners__ForumGroup img,
+  .listOfPartners__RussianCopperCompany img {
+    height: 4vh;
+  }
 }
 
 .footer__links {
@@ -282,9 +345,6 @@
   color: #ffffff;
   font-size: 1em;
   display: block;
-  vertical-align: 10;
-  /* vertical-align: middle;
-    clear: both; */
 }
 
 .footer__links a:hover {
@@ -299,6 +359,21 @@
   display: inline-block;
   margin: 0 0 0 8px;
   vertical-align: 9px;
+}
+
+@media (max-width: 320px) {
+  .footer__links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__links ul:not(:last-of-type) {
+    padding-bottom: 5vh;
+  }
 }
 
 * {
@@ -337,6 +412,7 @@ header {
       grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 10px;
   height: 10vh;
+  position: relative;
 }
 
 main {
@@ -377,6 +453,15 @@ footer p {
   -ms-grid-column-span: 8;
   grid-column: 3/11;
   margin: 20px 0;
+}
+
+@media (max-width: 320px) {
+  footer {
+    height: auto;
+  }
+  .copyrightMark {
+    text-align: center;
+  }
 }
 
 a {
