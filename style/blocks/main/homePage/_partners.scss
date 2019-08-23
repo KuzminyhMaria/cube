@@ -55,17 +55,9 @@
     height: 6vh;
 }
 
-@media (max-width: 320px) {
-    .partners {
-        grid-template-rows: 20vh 70vh 10vh;
-    }
-
+@media (max-width: 414px) {
     .partners h2 {
         margin: 0 auto;
-    }
-
-    .listOfPartners a:last-of-type {
-        margin-bottom: 0;
     }
 
     .listOfPartners__brusnika img,
@@ -86,5 +78,19 @@
     .listOfPartners__ForumGroup img,
     .listOfPartners__RussianCopperCompany img {
         height: 4vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    .partners {
+        grid-template-rows: 20vh 70vh 10vh;
+    }
+
+    .listOfPartners a:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .listOfPartners__Astra img {
+        margin-top: 0;
     }
 }
