@@ -1,0 +1,139 @@
+.portfolioObject {
+    margin: 10vh 0 0 0;
+    grid-column: 2/10;
+    font-family: 'Cervo Regular';
+}
+
+.portfolioObject__ {
+    width: 100%;
+    height: auto;
+}
+
+.portfolioObject__image {
+    position: relative;
+    height: 80vh;
+}
+
+.portfolioObject__image img {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolioObject__image h2 {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 3em;
+    font-weight: 400;
+    background: rgba(204, 237, 26, .9);
+    padding: 5px 20px;
+}
+
+.portfolioObject__brieflyAbout {
+    padding: 5vh 0;
+}
+
+.portfolioObject__brieflyAbout h3,
+.portfolioObject__brieflyAbout ul,
+.portfolioObject__brieflyAbout p {
+    margin: 5px 0;
+}
+
+.square {
+    float: left;
+    width: 80px;
+    height: auto;
+    font-size: 1.3em;
+    background-color: #cced1a;
+    margin: 5px 15px 0 0;
+}
+
+.portfolioObject__brieflyAbout h3 {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+.portfolioObject__brieflyAbout ul {
+    list-style-type: none;
+    font-size: 1.4em;
+    margin-left: 95px;
+}
+
+.portfolioObject__brieflyAbout p {
+    font-size: 1.4em;
+    margin-left: 95px;
+}
+
+.portfolioObject__brieflyAbout progress {
+    width: 100%;
+    height: 20px;
+    padding: 2px;
+    background: #cced1a;
+    margin-left: 90px;
+}
+
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 70%;
+    height: 20px;
+    background-color: #cced1a;
+  }
+
+
+
+  
+  progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 90%;
+    height: 20px;
+    background-color: #f1f1f1;
+  }
+  progress[value]::-webkit-progress-bar {
+    background-color: #f1f1f1;
+    //border-radius: 0px;
+    //box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
+  progress[value]::-webkit-progress-value {
+    background: rgba(204, 237, 26, .5);
+  }
+  
+  .value-box {
+    height: 10px;
+    background: #f1f1f1;
+  }
+
+
+
+
+
+.portfolioObject__ iframe {
+    height: 80vh;
+}
+
+
+
+
+.portfolioObjects {
+    grid-column: 10/12;
+    margin: 10vh 0 0 0;
+    height: 90vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: 0;
+}
+
+.portfolioObjects img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.portfolioObjects img:not(:first-of-type) {
+    margin-top: 5px;
+}
+
+.portfolioObjects img:not(:last-of-type) {
+    margin-bottom: 5px;
+}

@@ -2,9 +2,11 @@
     background: #f1f1f1;
     grid-column: 1/13;
     display: grid;
-    grid-template-rows: 20vh 80vh;
+    grid-template-rows: 20vh auto;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 10px;
+    //min-height: 380px;
+    min-height: 100vh;
 }
 
 .prodjects h2 {
@@ -18,17 +20,24 @@
 .sampleProjects {
     grid-column: 2/12;
     display: grid;
-    grid-template-rows: repeat(1, 70vh);
+    grid-template-rows: repeat(1, auto);
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 50px;
+    
+}
+
+.sampleProjects:last-child {
+    margin-bottom: 10vh;
 }
 
 .sampleProjects figure {
     background: #ffffff;
+    max-height: 959px;
 }
 
 .sampleProjects img {
     height: 85%;
+    max-height: 815px;
     width: 100%;
     transition-duration: .3s;
 }
@@ -45,33 +54,17 @@
     padding: 3vh 0;
 }
 
-@media (max-width: 414px) {
-    .prodjects {
-        grid-template-rows: 20vh auto;
-    }
-
+@media (max-width: 614px) {
     .prodjects h2 {
         margin: 0 auto;
     }
-
-    .sampleProjects {
-        grid-template-rows: repeat(3, 70vh);
-        grid-template-columns: 1fr;
-        grid-row-gap: 50px;
-    }
-
-    .sampleProjects:last-child {
-        margin-bottom: 10vh;
-    }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    .prodjects {
-        grid-template-rows: 20vh auto;
-    }
-
+@media (max-width: 1249px) {
     .sampleProjects {
-        grid-template-rows: repeat(1, 50vh);
-        margin-bottom: 10vh;
+        grid-column: 3/11;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 50px;
     }
 }

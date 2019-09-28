@@ -1,9 +1,10 @@
 .partners {
     grid-column: 1/13;
     display: grid;
-    grid-template-rows: 20vh 40vh 10vh;
+    grid-template-rows: 20vh auto 10vh;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 10px;
+    min-height: 40vh;
 }
 
 .partners h2 {
@@ -23,7 +24,7 @@
 }
 
 .listOfPartners a {
-    margin: 0 4vw 4vh 4vw;
+    margin: 2vh 4vw 2vh 4vw;
 }
 
 .listOfPartners img {
@@ -55,7 +56,7 @@
     height: 6vh;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 614px) {
     .partners h2 {
         margin: 0 auto;
     }
@@ -81,16 +82,36 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1px) and (max-width: 373px) {
     .partners {
         grid-template-rows: 20vh 70vh 10vh;
     }
+}
 
-    .listOfPartners a:last-of-type {
-        margin-bottom: 0;
+@media (min-width: 746px) and (max-width: 875px) {
+    .listOfPartners__SinaraDevelopment img {
+        margin-top: 20px;
     }
 
     .listOfPartners__Astra img {
-        margin-top: 0;
+        margin-top: -5px;
+    }
+}
+
+@media (max-width: 745px) {
+    .listOfPartners__Astra img {
+        margin-top: 0px;
+    }
+}
+
+@media (min-width: 876px) and (max-width: 1215px) {
+    .listOfPartners__Astra img {
+        margin-top: 0px;
+    }
+}
+
+@media (min-width: 616px) and (max-width: 745px) {
+    .listOfPartners__Astra img {
+        margin-top: 0px;
     }
 }

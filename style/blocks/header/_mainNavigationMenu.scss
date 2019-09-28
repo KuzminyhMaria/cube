@@ -1,10 +1,13 @@
 .mainNavigationMenu {
-    grid-column: 9/12;
-    width: 100%;
+    grid-column: 5/12;
+    //width: 100%;
     position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.logoOfMenu {
+.logoOfMainMenu {
     display: none;
 }
 
@@ -13,7 +16,7 @@
     grid-column: 5/13;
     display: grid;
     grid-template: repeat(1, 10vh)/repeat(4, 1fr);
-    grid-gap: 10px;
+    grid-gap: 30px;
 }
 
 .mainNavigationMenu li {
@@ -31,32 +34,41 @@
     transition-duration: .1s;
 }
 
-.mainNavigationMenu li a:hover {
+.mainNavigationMenu li:hover a {
     transform: scale(1.2);
+    margin-top: -6px;
 }
 
-.mainNavigationMenu li.active {
-    transform: scale(1.2);
+.mainNavigationMenu li.active:hover a {
+    transform: none;
 }
 
-@media (max-width: 414px) {
+.mainNavigationMenu li.active a {
+    color: $colorActive;
+    font-size: 2em;
+    margin-top: -6px;
+}
+
+/* .regularMenu {
+
+} */
+
+.dropdownMenu {
+
+}
+
+.dropdownMenu .active {
+
+}
+
+@media (max-width: 609px) {
     .mainNavigationMenu ul {
         display: none;
     }
 
-    .logoOfMenu {
+    .logoOfMainMenu {
         display: block;
         height: 30px;
-       // margin: 3.5vh 0 3vh 0;
         cursor: pointer;
-        position: absolute;
-        top: 3.5vh;
-        right: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .mainNavigationMenu {
-        grid-column: 7/12;
     }
 }
