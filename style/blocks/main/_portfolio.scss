@@ -1,5 +1,5 @@
 .portfolioObject {
-    margin: 10vh 0 0 0;
+    margin: 10vh 0;
     grid-column: 2/10;
     font-family: 'Cervo Regular';
 }
@@ -7,6 +7,11 @@
 .portfolioObject__ {
     width: 100%;
     height: auto;
+    display: none;
+}
+
+.portfolioObject__.active {
+    display: block;
 }
 
 .portfolioObject__image {
@@ -76,26 +81,15 @@
 progress[value] {
     -webkit-appearance: none;
     appearance: none;
-    width: 70%;
+    width: calc(100% - 105px);
     height: 20px;
     background-color: #cced1a;
   }
 
-
-
-  
-  progress[value] {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 90%;
-    height: 20px;
-    background-color: #f1f1f1;
-  }
   progress[value]::-webkit-progress-bar {
     background-color: #f1f1f1;
-    //border-radius: 0px;
-    //box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
   }
+
   progress[value]::-webkit-progress-value {
     background: rgba(204, 237, 26, .5);
   }
@@ -105,21 +99,70 @@ progress[value] {
     background: #f1f1f1;
   }
 
-
-
-
-
-.portfolioObject__ iframe {
-    height: 80vh;
+.portfolioObject__brieflyAbout__progressBar {
+    position: relative;
 }
 
+.portfolioObject__brieflyAbout__progressBar:not(:last-child) {
+    margin-bottom: 10px;
+}
 
+.portfolioObject__brieflyAbout__progressBar p {
+    position: absolute;
+    top: -8px;
+}
+
+.portfolioObject__brieflyAbout__progressBar p:first-of-type {
+    left: 0;
+}
+
+.portfolioObject__brieflyAbout__progressBar p:last-of-type {
+    right: 20px;
+}
+
+.portfolioObject__ iframe {
+    height: 60vh;
+    width: 100%;
+}
+
+.portfolioObject__authorAndCustomer {
+    height: auto;
+    width: 100%;
+    padding: 5vh 0;
+    overflow: hidden;
+    /* display: flex;
+    justify-content: space-around; */
+}
+
+.portfolioObject__authorAndCustomer figure {
+    font-size: 1.8em;
+    text-transform: uppercase;
+
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.portfolioObject__authorAndCustomer figure img {
+    height: 100px;
+}
+
+.portfolioObject__authorAndCustomer figure img:nth-of-type(2) {
+    margin-left: 50px;
+}
+
+.portfolioObject__authorAndCustomer figure figcaption {
+    margin-bottom: 20px;
+    background: rgba(204, 237, 26, .3);
+    //text-align: center;
+}
 
 
 .portfolioObjects {
     grid-column: 10/12;
     margin: 10vh 0 0 0;
-    height: 90vh;
+    //height: 90vh;
+    //height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
     scrollbar-width: 0;

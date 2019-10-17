@@ -526,7 +526,7 @@
     }
 } */
 .portfolioObject {
-  margin: 10vh 0 0 0;
+  margin: 10vh 0;
   -ms-grid-column: 2;
   -ms-grid-column-span: 8;
   grid-column: 2/10;
@@ -536,6 +536,11 @@
 .portfolioObject__ {
   width: 100%;
   height: auto;
+  display: none;
+}
+
+.portfolioObject__.active {
+  display: block;
 }
 
 .portfolioObject__image {
@@ -606,18 +611,9 @@ progress[value] {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
-  width: 70%;
+  width: calc(100% - 105px);
   height: 20px;
   background-color: #cced1a;
-}
-
-progress[value] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
-  width: 90%;
-  height: 20px;
-  background-color: #f1f1f1;
 }
 
 progress[value]::-webkit-progress-bar {
@@ -633,8 +629,60 @@ progress[value]::-webkit-progress-value {
   background: #f1f1f1;
 }
 
+.portfolioObject__brieflyAbout__progressBar {
+  position: relative;
+}
+
+.portfolioObject__brieflyAbout__progressBar:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.portfolioObject__brieflyAbout__progressBar p {
+  position: absolute;
+  top: -8px;
+}
+
+.portfolioObject__brieflyAbout__progressBar p:first-of-type {
+  left: 0;
+}
+
+.portfolioObject__brieflyAbout__progressBar p:last-of-type {
+  right: 20px;
+}
+
 .portfolioObject__ iframe {
-  height: 80vh;
+  height: 60vh;
+  width: 100%;
+}
+
+.portfolioObject__authorAndCustomer {
+  height: auto;
+  width: 100%;
+  padding: 5vh 0;
+  overflow: hidden;
+  /* display: flex;
+    justify-content: space-around; */
+}
+
+.portfolioObject__authorAndCustomer figure {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.portfolioObject__authorAndCustomer figure img {
+  height: 100px;
+}
+
+.portfolioObject__authorAndCustomer figure img:nth-of-type(2) {
+  margin-left: 50px;
+}
+
+.portfolioObject__authorAndCustomer figure figcaption {
+  margin-bottom: 20px;
+  background: rgba(204, 237, 26, 0.3);
 }
 
 .portfolioObjects {
@@ -642,7 +690,6 @@ progress[value]::-webkit-progress-value {
   -ms-grid-column-span: 2;
   grid-column: 10/12;
   margin: 10vh 0 0 0;
-  height: 90vh;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: 0;
