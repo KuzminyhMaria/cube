@@ -543,6 +543,10 @@
   display: block;
 }
 
+.portfolioObject__ a {
+  cursor: pointer;
+}
+
 .portfolioObject__image {
   position: relative;
   height: 80vh;
@@ -658,10 +662,8 @@ progress[value]::-webkit-progress-value {
 .portfolioObject__authorAndCustomer {
   height: auto;
   width: 100%;
-  padding: 5vh 0;
+  padding: 5vh 0 0 0;
   overflow: hidden;
-  /* display: flex;
-    justify-content: space-around; */
 }
 
 .portfolioObject__authorAndCustomer figure {
@@ -698,6 +700,11 @@ progress[value]::-webkit-progress-value {
 .portfolioObjects img {
   width: 100%;
   cursor: pointer;
+}
+
+.portfolioObjects img:first-of-type {
+  outline: 3px solid #cced1a;
+  outline-offset: -5px;
 }
 
 .portfolioObjects img:not(:first-of-type) {
