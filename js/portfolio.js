@@ -8,8 +8,6 @@ function alignmentOfHeightsOfTwoBlocks() {
 let portfolio = {
     arrayOfportfolioObject: [...document.querySelectorAll('.portfolioObject__')],
     arrayOfportfolioObjects: [...document.querySelector(".portfolioObjects").querySelectorAll('img')],
-    
-    
 
     lastActiveObject: 0,
 
@@ -17,18 +15,19 @@ let portfolio = {
         this.arrayOfportfolioObjects.forEach(function(item, i) {
             item.addEventListener('click', function(event) {
                 portfolio.changeActiveObject(i);
-                alignmentOfHeightsOfTwoBlocks();
+                if (screen.width > 600)
+                    alignmentOfHeightsOfTwoBlocks();
             });
         });
     },
 
     changeActiveObject(newActiveObject) {
-        this.removeActivationClass(newActiveObject);
+        this.removeActivationClass();
         this.addActivationClass(newActiveObject);
         this.lastActiveObject = newActiveObject;     
     },
 
-    removeActivationClass(newActiveObject) {
+    removeActivationClass() {
         this.arrayOfportfolioObject[this.lastActiveObject].classList.remove("active");
         this.removeFrame();
     },
@@ -39,7 +38,7 @@ let portfolio = {
     },
 
     addFrame(newActiveObject) {
-        this.arrayOfportfolioObjects[newActiveObject].style.outline = "3px solid #cced1a";
+        this.arrayOfportfolioObjects[newActiveObject].style.outline = "5px solid #cced1a";
         this.arrayOfportfolioObjects[newActiveObject].style.outlineOffset = "-5px";
     },
 
@@ -48,6 +47,9 @@ let portfolio = {
     }
 
 };
- 
-alignmentOfHeightsOfTwoBlocks();
-portfolio.choseIt();
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    if (screen.width > 600)
+        alignmentOfHeightsOfTwoBlocks();
+    portfolio.choseIt();
+});

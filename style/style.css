@@ -1,10 +1,6 @@
 @font-face {
   font-family: 'Century Gothic';
   src: local("Century Gothic"), url("../fonts/ofont.ru_Century Gothic.ttf") format("truetype");
-  /*src: local('Cleanvertising'),
-    url('../fonts/cleanvertising-light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal; */
 }
 
 @font-face {
@@ -111,18 +107,14 @@
 .mainNavigationMenu li:hover a {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  margin-top: -6px;
-}
-
-.mainNavigationMenu li.active:hover a {
-  -webkit-transform: none;
-          transform: none;
+  margin-top: -5px;
 }
 
 .mainNavigationMenu li.active a {
   color: #cced1a;
-  font-size: 2em;
-  margin-top: -6px;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  margin-top: -5px;
 }
 
 /* .regularMenu {
@@ -526,7 +518,7 @@
     }
 } */
 .portfolioObject {
-  margin: 10vh 0;
+  margin: 5vh 0;
   -ms-grid-column: 2;
   -ms-grid-column-span: 8;
   grid-column: 2/10;
@@ -667,11 +659,26 @@ progress[value]::-webkit-progress-value {
 }
 
 .portfolioObject__authorAndCustomer figure {
+  height: 100%;
   font-size: 1.8em;
   text-transform: uppercase;
   width: 50%;
   float: left;
   text-align: center;
+}
+
+.portfolioObject__authorAndCustomer figure a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .portfolioObject__authorAndCustomer figure img {
@@ -691,7 +698,7 @@ progress[value]::-webkit-progress-value {
   -ms-grid-column: 10;
   -ms-grid-column-span: 2;
   grid-column: 10/12;
-  margin: 10vh 0 0 0;
+  margin: 5vh 0 0 0;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: 0;
@@ -703,7 +710,7 @@ progress[value]::-webkit-progress-value {
 }
 
 .portfolioObjects img:first-of-type {
-  outline: 3px solid #cced1a;
+  outline: 5px solid #cced1a;
   outline-offset: -5px;
 }
 
@@ -713,6 +720,85 @@ progress[value]::-webkit-progress-value {
 
 .portfolioObjects img:not(:last-of-type) {
   margin-bottom: 5px;
+}
+
+@media (max-width: 1024px) {
+  .portfolioObject {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    margin: 1vh 0 5vh 0;
+  }
+  .portfolioObject__image {
+    height: 64vh;
+    max-height: 500px;
+  }
+  .portfolioObject__authorAndCustomer figure img {
+    max-height: 100px;
+    max-width: 80%;
+  }
+  .portfolioObjects {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    height: 10vh;
+    min-height: 100px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .portfolioObjects img {
+    height: 100%;
+    width: 100px;
+  }
+  .portfolioObjects img:not(:first-of-type) {
+    margin-top: 0;
+  }
+  .portfolioObjects img:not(:last-of-type) {
+    margin-bottom: 0;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .portfolioObject__authorAndCustomer figure {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 375px) {
+  .portfolioObject__image h2 {
+    font-size: 2.5em;
+  }
+  .square {
+    font-size: 1em;
+  }
+  .portfolioObject__brieflyAbout h3 {
+    font-size: 1.2em;
+  }
+  .portfolioObject__brieflyAbout ul {
+    font-size: 1.1em;
+  }
+  .portfolioObject__brieflyAbout p {
+    font-size: 1.1em;
+  }
+  .portfolioObject__brieflyAbout__progressBar p {
+    font-size: 1em;
+    margin: 8px 0 0 95px;
+  }
 }
 
 .jobListing {
@@ -743,9 +829,10 @@ progress[value]::-webkit-progress-value {
   text-decoration: underline;
 }
 
-/* .jobListing ul li {
-    cursor: pointer;
-} */
+.jobListing ul li {
+  cursor: pointer;
+}
+
 .brieflyAboutUs {
   -ms-grid-column: 1;
   -ms-grid-column-span: 12;
@@ -1001,7 +1088,11 @@ progress[value]::-webkit-progress-value {
   display: block;
 }
 
-.footer__links a:hover {
+.footer__links li a:hover {
+  color: #cced1a;
+}
+
+.footer__links li.active a {
   color: #cced1a;
 }
 
@@ -1114,7 +1205,7 @@ footer p {
   -ms-grid-column: 3;
   -ms-grid-column-span: 8;
   grid-column: 3/11;
-  padding: 5vh 0;
+  padding: 0 0 5vh 0;
 }
 
 @media (max-width: 414px) {

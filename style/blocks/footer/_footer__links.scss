@@ -30,7 +30,11 @@
     display: block;
 }
 
-.footer__links a:hover {
+.footer__links li a:hover {
+    color: $colorActive;
+}
+
+.footer__links li.active a {
     color: $colorActive;
 }
 

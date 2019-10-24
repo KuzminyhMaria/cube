@@ -1,6 +1,5 @@
 .mainNavigationMenu {
     grid-column: 5/12;
-    //width: 100%;
     position: relative;
     display: flex;
     justify-content: flex-end;
@@ -20,7 +19,6 @@
 }
 
 .mainNavigationMenu li {
-    //min-width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,17 +34,13 @@
 
 .mainNavigationMenu li:hover a {
     transform: scale(1.2);
-    margin-top: -6px;
-}
-
-.mainNavigationMenu li.active:hover a {
-    transform: none;
+    margin-top: -5px;
 }
 
 .mainNavigationMenu li.active a {
     color: $colorActive;
-    font-size: 2em;
-    margin-top: -6px;
+    transform: scale(1.2);
+    margin-top: -5px;
 }
 
 /* .regularMenu {

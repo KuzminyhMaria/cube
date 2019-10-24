@@ -2,11 +2,6 @@
     font-family: 'Century Gothic';
     src: local('Century Gothic'),
     url('../fonts/ofont.ru_Century\ Gothic.ttf') format('truetype');
-    
-    /*src: local('Cleanvertising'),
-    url('../fonts/cleanvertising-light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal; */
 }
 
 @font-face {
@@ -90,7 +85,6 @@ footer {
     height: auto;
     min-height: 30vh;
     min-height: 200px;
-    //padding-bottom: 4vh;
     font-family: 'Cervo Thin';
     color: $colorTextLight;
     font-size: 1.3em;
@@ -98,8 +92,7 @@ footer {
 
 footer p {
     grid-column: 3/11;
-    //margin-top: 20px;
-    padding: 5vh 0;
+    padding: 0 0 5vh 0;
 }
 
 @media (max-width: 414px) {

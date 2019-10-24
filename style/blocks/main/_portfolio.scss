@@ -1,5 +1,5 @@
 .portfolioObject {
-    margin: 10vh 0;
+    margin: 5vh 0;
     grid-column: 2/10;
     font-family: 'Cervo Regular';
 }
@@ -137,12 +137,20 @@ progress[value] {
 }
 
 .portfolioObject__authorAndCustomer figure {
+    height: 100%;
     font-size: 1.8em;
     text-transform: uppercase;
-
     width: 50%;
     float: left;
     text-align: center;
+}
+
+.portfolioObject__authorAndCustomer figure a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .portfolioObject__authorAndCustomer figure img {
@@ -156,15 +164,11 @@ progress[value] {
 .portfolioObject__authorAndCustomer figure figcaption {
     margin-bottom: 20px;
     background: rgba(204, 237, 26, .3);
-    //text-align: center;
 }
-
 
 .portfolioObjects {
     grid-column: 10/12;
-    margin: 10vh 0 0 0;
-    //height: 90vh;
-    //height: 100%;
+    margin: 5vh 0 0 0;
     overflow-y: scroll;
     overflow-x: hidden;
     scrollbar-width: 0;
@@ -176,10 +180,9 @@ progress[value] {
 }
 
 .portfolioObjects img:first-of-type {
-   outline: 3px solid #cced1a;
+   outline: 5px solid #cced1a;
    outline-offset: -5px;
 }
-
 
 .portfolioObjects img:not(:first-of-type) {
     margin-top: 5px;
@@ -187,4 +190,83 @@ progress[value] {
 
 .portfolioObjects img:not(:last-of-type) {
     margin-bottom: 5px;
+}
+
+@media (max-width: 1024px) {
+    .portfolioObject {
+        grid-column: 2/12;
+        grid-row-start: 2;
+        margin: 1vh 0 5vh 0;
+    }
+
+    .portfolioObject__image {
+        height: 64vh;
+        max-height: 500px;
+    }
+
+    .portfolioObject__authorAndCustomer figure img {
+        //height: auto;
+        max-height: 100px;
+        max-width: 80%;
+    }
+    
+    .portfolioObjects {
+        grid-column: 2/12;
+        grid-row: 1/2;
+        height: 10vh;
+        min-height: 100px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .portfolioObjects img {
+        height: 100%;
+        width: 100px;
+    }
+
+    .portfolioObjects img:not(:first-of-type) {
+        margin-top: 0;
+    }
+    
+    .portfolioObjects img:not(:last-of-type) {
+        margin-bottom: 0;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    .portfolioObject__authorAndCustomer figure {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 375px) {
+    
+    .portfolioObject__image h2 {
+        font-size: 2.5em;
+    }
+
+    .square {
+        font-size: 1em;
+    }
+    
+    .portfolioObject__brieflyAbout h3 {
+        font-size: 1.2em;
+    }
+    
+    .portfolioObject__brieflyAbout ul {
+        font-size: 1.1em;
+    }
+
+    .portfolioObject__brieflyAbout p {
+        font-size: 1.1em;
+    }
+
+    .portfolioObject__brieflyAbout__progressBar p {
+        font-size: 1em;
+        margin: 8px 0 0 95px;
+    }
 }
