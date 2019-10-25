@@ -1,6 +1,5 @@
 .mainNavigationMenu {
     grid-column: 5/12;
-    position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -12,6 +11,9 @@
 
 .mainNavigationMenu ul {
     list-style-type: none;
+}
+
+.mainNavigationMenu ul.regularMenu {
     grid-column: 5/13;
     display: grid;
     grid-template: repeat(1, 10vh)/repeat(4, 1fr);
@@ -43,26 +45,50 @@
     margin-top: -5px;
 }
 
-/* .regularMenu {
-
-} */
-
-.dropdownMenu {
-
-}
-
-.dropdownMenu .active {
-
-}
-
 @media (max-width: 609px) {
-    .mainNavigationMenu ul {
-        display: none;
-    }
-
     .logoOfMainMenu {
         display: block;
         height: 30px;
         cursor: pointer;
+    }
+
+    .mainNavigationMenu ul.dropdownMenu {
+        display: none;
+    }
+
+    .mainNavigationMenu ul.dropdownMenu.active {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(127, 127, 127, 1);
+        display: flex;
+        flex-direction: column;
+        z-index: 999999;
+    }
+
+    .mainNavigationMenu ul.dropdownMenu.active li {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+        background: rgba(255, 255, 255, .9);
+        outline: 1px solid rgba(127, 127, 127, 0.6);
+    }
+
+    .mainNavigationMenu ul.dropdownMenu.active li:hover {
+        background: rgba(255, 255, 255, .5);
+        color: $colorTextLight;
+    }
+
+    .mainNavigationMenu ul.dropdownMenu.active li:hover a {
+        color: $colorTextLight;
+    }
+    
+    .mainNavigationMenu ul.dropdownMenu.active li.active {
+        background: rgba(255, 255, 255, .5);
+    }
+
+    .mainNavigationMenu ul.dropdownMenu.active li.active a {
+        color: $colorTextLight;
     }
 }

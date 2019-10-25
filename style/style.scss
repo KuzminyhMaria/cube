@@ -62,7 +62,7 @@ header {
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 10px;
     height: 10vh;
-    min-height: 70px;
+    min-height: 60px;
     position: relative;
 }
 
@@ -93,6 +93,12 @@ footer {
 footer p {
     grid-column: 3/11;
     padding: 0 0 5vh 0;
+}
+
+@media (max-width: 600px) {
+    footer p {
+        text-align: center;
+    }
 }
 
 @media (max-width: 414px) {
