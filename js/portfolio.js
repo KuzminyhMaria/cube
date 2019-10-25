@@ -24,6 +24,10 @@ let portfolio = {
     changeActiveObject(newActiveObject) {
         this.removeActivationClass();
         this.addActivationClass(newActiveObject);
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
         this.lastActiveObject = newActiveObject;     
     },
 
@@ -45,7 +49,6 @@ let portfolio = {
     removeFrame() {
         this.arrayOfportfolioObjects[this.lastActiveObject].style.outline = "0px";
     }
-
 };
 
 document.addEventListener('DOMContentLoaded', function(event) {

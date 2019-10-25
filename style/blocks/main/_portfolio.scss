@@ -124,37 +124,56 @@ progress[value] {
     right: 20px;
 }
 
+.portfolioObject__map {
+    height: 50vh;
+    width: 70%;
+    float: left;
+    margin-right: 10px;
+}
+
 .portfolioObject__ iframe {
-    height: 60vh;
+    height: 100%;
     width: 100%;
+}
+
+.portfolioObject__map::after {
+    //width: calc(30% - 10px);
 }
 
 .portfolioObject__authorAndCustomer {
-    height: auto;
-    width: 100%;
-    padding: 5vh 0 0 0;
+    height: 50vh;
+    width: calc(30% - 10px);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
 }
 
 .portfolioObject__authorAndCustomer figure {
-    height: 100%;
+    height: 25vh;
     font-size: 1.8em;
     text-transform: uppercase;
-    width: 50%;
+    width: 100%;
     float: left;
     text-align: center;
 }
 
 .portfolioObject__authorAndCustomer figure a {
     display: flex;
-    height: 100%;
+    height: calc(100% - 1.3em);
     width: 100%;
     justify-content: center;
     align-items: center;
 }
 
+#SevernyyeKvartaly .portfolioObject__authorAndCustomer figure:first-of-type a {
+    height: calc(50% - 1.3em);
+}
+
 .portfolioObject__authorAndCustomer figure img {
     height: 100px;
+    max-width: 90%;
 }
 
 .portfolioObject__authorAndCustomer figure img:nth-of-type(2) {
@@ -162,7 +181,6 @@ progress[value] {
 }
 
 .portfolioObject__authorAndCustomer figure figcaption {
-    margin-bottom: 20px;
     background: rgba(204, 237, 26, .3);
 }
 
