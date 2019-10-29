@@ -11,7 +11,7 @@ let jobOpenings = {
     },
     
     scrollToElement(i) {
-        this.arrayOfAboutVacancies[i].scrollIntoView();
+        this.arrayOfAboutVacancies[i].scrollIntoView({behavior: "smooth"});
     }
 };
 
