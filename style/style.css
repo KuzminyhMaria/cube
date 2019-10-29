@@ -962,20 +962,6 @@ progress[value]::-webkit-progress-value {
   margin-left: 21px;
 }
 
-.upArrowForLifting {
-  position: fixed;
-  bottom: calc(100vw / 12 / 2 - 20px);
-  right: calc(100vw / 12 / 2 - 30px);
-}
-
-.upArrowForLifting img {
-  height: 60px;
-}
-
-.notActive {
-  display: none;
-}
-
 .contacts {
   margin: 10vh 0;
   -ms-grid-column: 2;
@@ -1224,6 +1210,21 @@ main {
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 10px;
+}
+
+.upArrowForLifting {
+  position: fixed;
+  bottom: calc(100vw / 12 / 2 - 20px);
+  right: calc(100vw / 12 / 2 - 30px);
+  cursor: pointer;
+}
+
+.upArrowForLifting img {
+  height: 60px;
+}
+
+.notActive {
+  display: none;
 }
 
 footer {

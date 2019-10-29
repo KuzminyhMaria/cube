@@ -75,6 +75,21 @@ main {
     grid-column-gap: 10px;
 }
 
+.upArrowForLifting {
+    position: fixed;
+    bottom: calc(100vw / 12 / 2 - 20px);
+    right: calc(100vw / 12 / 2 - 30px);
+    cursor: pointer;
+}
+
+.upArrowForLifting img {
+    height: 60px;
+}
+
+.notActive {
+    display: none;
+}
+
 footer {
     grid-column: 1/13;
     display: grid;
