@@ -15,8 +15,7 @@ let portfolio = {
         this.arrayOfportfolioObjects.forEach(function(item, i) {
             item.addEventListener('click', function(event) {
                 portfolio.changeActiveObject(i);
-                if (screen.width > 1024)
-                    alignmentOfHeightsOfTwoBlocks();
+                alignmentOfHeightsOfTwoBlocks();
             });
         });
     },
@@ -51,8 +50,12 @@ let portfolio = {
     }
 };
 
+alignmentOfHeightsOfTwoBlocks();
+
+window.onresize = function() {
+    alignmentOfHeightsOfTwoBlocks();
+};
+
 document.addEventListener('DOMContentLoaded', function(event) {
-    if (screen.width > 1024)
-        alignmentOfHeightsOfTwoBlocks();
     portfolio.choseIt();
 });

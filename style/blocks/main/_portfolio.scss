@@ -131,15 +131,6 @@ progress[value] {
     margin-right: 10px;
 }
 
-.portfolioObject__ iframe {
-    height: 100%;
-    width: 100%;
-}
-
-.portfolioObject__map::after {
-    //width: calc(30% - 10px);
-}
-
 .portfolioObject__authorAndCustomer {
     height: 50vh;
     width: calc(30% - 10px);
@@ -231,6 +222,7 @@ progress[value] {
         grid-column: 2/12;
         grid-row: 1/2;
         height: 10vh;
+        max-height: 10vh;
         min-height: 100px;
         overflow-y: hidden;
         overflow-x: scroll;
@@ -257,6 +249,15 @@ progress[value] {
 @media (max-width: 500px) {
     .portfolioObject__authorAndCustomer figure {
         font-size: 1.6em;
+    }
+
+    .portfolioObject__authorAndCustomer figure a {
+        height: calc(25vh - 2.6em);
+    }
+
+    .portfolioObject__authorAndCustomer figure img {
+        max-height: 70px;
+        max-width: 80%;
     }
 }
 

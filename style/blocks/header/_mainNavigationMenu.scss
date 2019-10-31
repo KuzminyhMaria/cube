@@ -52,6 +52,10 @@
         cursor: pointer;
     }
 
+    .mainNavigationMenu ul.regularMenu {
+        display: none;
+    }
+
     .mainNavigationMenu ul.dropdownMenu {
         display: none;
     }

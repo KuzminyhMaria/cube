@@ -109,6 +109,13 @@ footer p {
     padding: 0 0 5vh 0;
 }
 
+@media (max-width: 1024px) {
+    .upArrowForLifting {
+        bottom: calc(100vw / 12 / 2);
+        right: calc(100vw / 12 / 2);
+    }
+}
+
 @media (max-width: 600px) {
     footer p {
         text-align: center;
@@ -122,6 +129,15 @@ footer p {
 
     .copyrightMark {
         text-align: center;
+    }
+
+    .upArrowForLifting {
+        bottom: calc(100vw / 12 / 2);
+        right: calc(100vw / 12 / 2);
+    }
+    
+    .upArrowForLifting img {
+        height: 55px;
     }
 }
 

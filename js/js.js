@@ -25,27 +25,6 @@ let mainMenu = {
     },
 };
 
-let upArrowForLifting = {
-    upArrow: document.querySelector('.upArrowForLifting'),
-
-    clickOn() {
-        this.upArrow.addEventListener('click', function(event) {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    },
-
-    upArrowStateChange() {
-        if (window.pageYOffset >= 400) {
-            upArrowForLifting.upArrow.classList.remove("notActive");
-        } else {
-            upArrowForLifting.upArrow.classList.add("notActive");
-        }
-    }
-};
-
 mainMenu.changeAppearanceOfMenu();
 
 frames.onresize = function() {
@@ -55,9 +34,3 @@ frames.onresize = function() {
 document.addEventListener('DOMContentLoaded', function(event) {
     mainMenu.clickOnLogoOfMainMenu();
 });
-
-document.addEventListener('scroll', function(event) {
-    upArrowForLifting.upArrowStateChange();
-});
-
-upArrowForLifting.clickOn();
