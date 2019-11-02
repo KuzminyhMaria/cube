@@ -1,23 +1,26 @@
 .mainNavigationMenu {
-    grid-column: 9/12;
-    width: 100%;
-    position: relative;
+    grid-column: 5/12;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.logoOfMenu {
+.logoOfMainMenu {
     display: none;
 }
 
 .mainNavigationMenu ul {
     list-style-type: none;
+}
+
+.mainNavigationMenu ul.regularMenu {
     grid-column: 5/13;
     display: grid;
     grid-template: repeat(1, 10vh)/repeat(4, 1fr);
-    grid-gap: 10px;
+    grid-gap: 30px;
 }
 
 .mainNavigationMenu li {
-    //min-width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,27 +34,65 @@
     transition-duration: .1s;
 }
 
-.mainNavigationMenu li a:hover {
+.mainNavigationMenu li:hover a {
     transform: scale(1.2);
+    margin-top: -5px;
 }
 
-.mainNavigationMenu li.active {
+.mainNavigationMenu li.active a {
+    color: $colorActive;
     transform: scale(1.2);
+    margin-top: -5px;
 }
 
-@media (max-width: 320px) {
-    .mainNavigationMenu ul {
+@media (max-width: 609px) {
+    .logoOfMainMenu {
+        display: block;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .mainNavigationMenu ul.regularMenu {
         display: none;
     }
 
-    .logoOfMenu {
-        display: block;
-        height: 30px;
-       // margin: 3.5vh 0 3vh 0;
-        cursor: pointer;
-        position: absolute;
-        top: 3.5vh;
-        right: 0;
+    .mainNavigationMenu ul.dropdownMenu {
+        display: none;
     }
 
+    .mainNavigationMenu ul.dropdownMenu.active {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(127, 127, 127, 1);
+        display: flex;
+        flex-direction: column;
+        z-index: 999999;
+    }
+
+    .mainNavigationMenu ul.dropdownMenu.active li {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+        background: rgba(255, 255, 255, .9);
+        outline: 1px solid rgba(127, 127, 127, 0.6);
+    }
+
+    .mainNavigationMenu ul.dropdownMenu.active li:hover {
+        background: rgba(255, 255, 255, .5);
+        color: $colorTextLight;
+    }
+
+    .mainNavigationMenu ul.dropdownMenu.active li:hover a {
+        color: $colorTextLight;
+    }
+    
+    .mainNavigationMenu ul.dropdownMenu.active li.active {
+        background: rgba(255, 255, 255, .5);
+    }
+
+    .mainNavigationMenu ul.dropdownMenu.active li.active a {
+        color: $colorTextLight;
+    }
 }

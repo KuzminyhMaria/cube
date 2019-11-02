@@ -1,0 +1,290 @@
+.portfolioObject {
+    margin: 5vh 0;
+    grid-column: 2/10;
+    font-family: 'Cervo Regular';
+}
+
+.portfolioObject__ {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.portfolioObject__.active {
+    display: block;
+}
+
+.portfolioObject__ a {
+    cursor: pointer;
+} 
+
+.portfolioObject__image {
+    position: relative;
+    height: 80vh;
+}
+
+.portfolioObject__image img {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolioObject__image h2 {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 3em;
+    font-weight: 400;
+    background: rgba(204, 237, 26, .9);
+    padding: 5px 20px;
+}
+
+.portfolioObject__brieflyAbout {
+    padding: 5vh 0;
+}
+
+.portfolioObject__brieflyAbout h3,
+.portfolioObject__brieflyAbout ul,
+.portfolioObject__brieflyAbout p {
+    margin: 5px 0;
+}
+
+.square {
+    float: left;
+    width: 80px;
+    height: auto;
+    font-size: 1.3em;
+    background-color: #cced1a;
+    margin: 5px 15px 0 0;
+}
+
+.portfolioObject__brieflyAbout h3 {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+.portfolioObject__brieflyAbout ul {
+    list-style-type: none;
+    font-size: 1.4em;
+    margin-left: 95px;
+}
+
+.portfolioObject__brieflyAbout p {
+    font-size: 1.4em;
+    margin-left: 95px;
+}
+
+.portfolioObject__brieflyAbout progress {
+    width: 100%;
+    height: 20px;
+    padding: 2px;
+    background: #cced1a;
+    margin-left: 90px;
+}
+
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: calc(100% - 105px);
+    height: 20px;
+    background-color: #cced1a;
+  }
+
+  progress[value]::-webkit-progress-bar {
+    background-color: #f1f1f1;
+  }
+
+  progress[value]::-webkit-progress-value {
+    background: rgba(204, 237, 26, .5);
+  }
+  
+  .value-box {
+    height: 10px;
+    background: #f1f1f1;
+  }
+
+.portfolioObject__brieflyAbout__progressBar {
+    position: relative;
+}
+
+.portfolioObject__brieflyAbout__progressBar:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.portfolioObject__brieflyAbout__progressBar p {
+    position: absolute;
+    top: -8px;
+}
+
+.portfolioObject__brieflyAbout__progressBar p:first-of-type {
+    left: 0;
+}
+
+.portfolioObject__brieflyAbout__progressBar p:last-of-type {
+    right: 20px;
+}
+
+.portfolioObject__map {
+    height: 50vh;
+    width: 70%;
+    float: left;
+    margin-right: 10px;
+}
+
+.portfolioObject__authorAndCustomer {
+    height: 50vh;
+    width: calc(30% - 10px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+.portfolioObject__authorAndCustomer figure {
+    height: 25vh;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.portfolioObject__authorAndCustomer figure a {
+    display: flex;
+    height: calc(100% - 1.3em);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#SevernyyeKvartaly .portfolioObject__authorAndCustomer figure:first-of-type a {
+    height: calc(50% - 1.3em);
+}
+
+.portfolioObject__authorAndCustomer figure img {
+    height: 100px;
+    max-width: 90%;
+}
+
+.portfolioObject__authorAndCustomer figure img:nth-of-type(2) {
+    margin-left: 50px;
+}
+
+.portfolioObject__authorAndCustomer figure figcaption {
+    background: rgba(204, 237, 26, .3);
+}
+
+.portfolioObjects {
+    grid-column: 10/12;
+    margin: 5vh 0 0 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: 0;
+}
+
+.portfolioObjects img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.portfolioObjects img:first-of-type {
+   outline: 5px solid #cced1a;
+   outline-offset: -5px;
+}
+
+.portfolioObjects img:not(:first-of-type) {
+    margin-top: 5px;
+}
+
+.portfolioObjects img:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 1024px) {
+    .portfolioObject {
+        grid-column: 2/12;
+        grid-row-start: 2;
+        margin: 1vh 0 5vh 0;
+    }
+
+    .portfolioObject__image {
+        height: 64vh;
+        max-height: 500px;
+    }
+
+    .portfolioObject__authorAndCustomer figure img {
+        max-height: 100px;
+        max-width: 80%;
+    }
+    
+    .portfolioObjects {
+        grid-column: 2/12;
+        grid-row: 1/2;
+        height: 10vh;
+        max-height: 10vh;
+        min-height: 100px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .portfolioObjects img {
+        height: 100%;
+        width: 100px;
+    }
+
+    .portfolioObjects img:not(:first-of-type) {
+        margin-top: 0;
+    }
+    
+    .portfolioObjects img:not(:last-of-type) {
+        margin-bottom: 0;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    .portfolioObject__authorAndCustomer figure {
+        font-size: 1.6em;
+    }
+
+    .portfolioObject__authorAndCustomer figure a {
+        height: calc(25vh - 2.6em);
+    }
+
+    .portfolioObject__authorAndCustomer figure img {
+        max-height: 70px;
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 375px) {
+    
+    .portfolioObject__image h2 {
+        font-size: 2.5em;
+    }
+
+    .square {
+        font-size: 1em;
+    }
+    
+    .portfolioObject__brieflyAbout h3 {
+        font-size: 1.2em;
+    }
+    
+    .portfolioObject__brieflyAbout ul {
+        font-size: 1.1em;
+    }
+
+    .portfolioObject__brieflyAbout p {
+        font-size: 1.1em;
+    }
+
+    .portfolioObject__brieflyAbout__progressBar p {
+        font-size: 1em;
+        margin: 8px 0 0 95px;
+    }
+}

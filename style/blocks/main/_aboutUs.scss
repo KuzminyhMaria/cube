@@ -1,0 +1,94 @@
+.aboutUs {
+    grid-column: 2/12;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cervo Thin';
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.aboutUs div {
+    display: flex;
+}
+
+.aboutUsFirst,
+.aboutUsThird,
+.aboutUsFourth {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutUsSecond,
+.aboutUsFifth {
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;    
+}
+
+.aboutUsFirst,
+.aboutUsSecond,
+.aboutUsThird,
+.aboutUsFourth,
+.aboutUsFifth {
+    height: auto;
+    padding-top: 10vh;
+}
+
+.aboutUs div:last-of-type {
+    padding-bottom: 10vh;
+}
+
+.aboutUsSecond p:last-of-type {
+    margin-top: 30px;
+}
+
+.aboutUs img {
+    width: 50vw;
+}
+
+.aboutUs .aboutUsFirst img,
+.aboutUs .aboutUsFourth img {
+    margin-right: 50px;
+}
+
+.aboutUs .aboutUsThird img {
+    margin-left: 50px;
+}
+
+@media (max-width: 600px) {
+    .aboutUs {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 979px) {
+    .aboutUsFirst,
+    .aboutUsThird,
+    .aboutUsFourth {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutUs img {
+        width: 80%;
+    }
+
+    .aboutUs .aboutUsFirst img,
+    .aboutUs .aboutUsFourth img {
+        margin: 0 0 20px 0;
+    }
+
+    .aboutUs .aboutUsThird img {
+        margin: 20px 0 0 0;
+    }
+
+    .aboutUs p {
+        text-align: center;
+    }
+}
